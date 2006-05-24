@@ -1,14 +1,15 @@
-name: Test-Depends
-version: 0.01
 abstract: Gracefully skip tests if missing modules
 author: Sam Vilain <samv@cpan.org>
-license: perl
-distribution_type: module
-build_requires:
+build_requires: 
   Test::More: 0
-requires:
-  perl: 5.6.0
-no_index:
-  directory:
+distribution_type: module
+generated_by: Module::Install version 0.61
+license: perl
+name: Test-Depends
+no_index: 
+  directory: 
     - inc
-generated_by: Module::Install version 0.39
+    - t
+requires: 
+  perl: 5.6.0
+version: 0.02

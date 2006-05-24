@@ -1,10 +1,10 @@
 #!/usr/bin/perl -w
 
 use strict;
-use Test::More tests => 12;
+use Test::More tests => 14;
 use FindBin qw($Bin);
 
-$ENV{PERL5LIB} = join(":", grep { defined } $ENV{PERL5LIB}, "$Bin/../lib");
+$ENV{PERL5LIB} = join(":", "$Bin/../lib", grep { defined } $ENV{PERL5LIB});
 
 # test normal use - failure
 my $output = `$^X t/someclass.pl 2>&1`;
@@ -12,7 +12,7 @@ is($output, "1..0 # Skip missing/broken dependancies; SomeClass\n",
    "include SomeClass (missing) bails out");
 is($?, 0, "correct RC");
 
-$ENV{PERL5LIB} = join(":", grep { defined } $ENV{PERL5LIB}, "$Bin");
+$ENV{PERL5LIB} = join(":", $Bin, grep { defined } $ENV{PERL5LIB});
 
 $output = `$^X t/someclass.pl 2>&1`;
 is($output, "1..1\nok 1\n",
@@ -37,4 +37,9 @@ is($?, 0, "correct RC");
 $output = `$^X t/someclass-import.pl somebadfunc 2>&1`;
 like($output, qr/import failure/,
      "include SomeClass qw(somebadfunc) failed");
+is($?, 0, "correct RC");
+
+$output = `$^X t/twoclasses.pl 2>&1`;
+is($output, "1..1\nok 1\n",
+   "include SomeClass 1.00 (present) succeeds");
 is($?, 0, "correct RC");

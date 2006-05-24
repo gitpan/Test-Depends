@@ -8,11 +8,13 @@ inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Test/Depends.pm
 Makefile.PL
-MANIFEST			This list of files
+MANIFEST
 META.yml
 t/00-load.t
 t/02-test-budget-rentaharness.t
+t/SecondClass.pm
 t/someclass-import.pl
 t/someclass-version.pl
 t/someclass.pl
 t/SomeClass.pm
+t/twoclasses.pl

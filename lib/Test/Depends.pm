@@ -1,7 +1,11 @@
 
 package Test::Depends;
 
-our $VERSION = 0.01;
+use strict 'vars', 'subs';
+use 5.006;
+use warnings;
+
+our $VERSION = 0.02;
 
 =head1 NAME
 
@@ -30,10 +34,11 @@ sub import {
     while ( my $package = shift ) {
 	my $eval = ("# line 0 \"Test::Depends generated\"\n"
 		    ."package $caller;\n");
-	my $import_args = "";
+	my $import = "";
 	my $wanted_version;
 	if ( ref $package and ref $package eq "ARRAY" ) {
 	    ($package, my @args) = (@$package);
+	    no warnings 'numeric';
 	    if ( @args == 1 and
 		 not ref $args[0] and
 		 ( $args[0]+0 != 0 or $args[0]+0 eq $args[0] )
@@ -52,7 +57,7 @@ sub import {
 	$eval .= "use $package$import;";
 	eval $eval;
 	$eval =~ s{^}{#    }mg;
-	#print STDERR "# RAN:\n$eval\n" if ( -t STDOUT );
+	print STDERR "# RAN:\n$eval\n" if ( -t STDOUT );
 	if ( $@ ) {
 	    (my $pm = $package) =~ s{::}{/}g;
 	    $pm .= ".pm";
@@ -76,6 +81,7 @@ sub import {
 			      ."failed to load:\n$err\n");
 	    }
 	} else {
+	    my $i;
 	    print "; ".join(", ", grep { !($i++ % 2) } @missing)."\n";
 	}
 	exit(0);
@@ -97,9 +103,21 @@ Sam Vilain, <samv@cpan.org>.
 
 =head1 LICENSE
 
-Copyright (c) 2005, Catalyst IT (NZ) Ltd.  This program is free
+Copyright (c) 2005, 2006, Catalyst IT (NZ) Ltd.  This program is free
 software; you may use it and/or redistribute it under the same terms
 as Perl itself.
+
+=head1 CHANGELOG
+
+=over
+
+=item 0.02, 25 May 2006
+
+If you specified import arguments to a dependency, they ended up
+applying to unadorned arguments further in the dependency list.
+Whoops!  C<no strict>
+
+=back
 
 =cut
 
