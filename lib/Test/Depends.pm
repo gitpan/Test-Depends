@@ -5,7 +5,7 @@ use strict 'vars', 'subs';
 use 5.006;
 use warnings;
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 =head1 NAME
 
@@ -57,7 +57,7 @@ sub import {
 	$eval .= "use $package$import;";
 	eval $eval;
 	$eval =~ s{^}{#    }mg;
-	print STDERR "# RAN:\n$eval\n" if ( -t STDOUT );
+	#print STDERR "# RAN:\n$eval\n" if ( -t STDOUT );
 	if ( $@ ) {
 	    (my $pm = $package) =~ s{::}{/}g;
 	    $pm .= ".pm";
@@ -110,6 +110,10 @@ as Perl itself.
 =head1 CHANGELOG
 
 =over
+
+=item 0.03, 25 May 2006
+
+Uncomment debugging line C<:-}>
 
 =item 0.02, 25 May 2006
 
