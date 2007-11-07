@@ -1,0 +1,6 @@
+.git
+pm_to_blib
+blib
+Makefile
+Makefile.old
+MANIFEST.bak

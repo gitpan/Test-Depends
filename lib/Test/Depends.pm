@@ -5,7 +5,7 @@ use strict 'vars', 'subs';
 use 5.006;
 use warnings;
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 =head1 NAME
 
@@ -109,7 +109,15 @@ as Perl itself.
 
 =head1 CHANGELOG
 
+For the complete history,
+
+  git clone git://utsl.gen.nz/Test-Depends
+
 =over
+
+=item 0.04, 7 Nov 2007
+
+Fix Win32 compatibility
 
 =item 0.03, 25 May 2006
 

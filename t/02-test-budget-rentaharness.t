@@ -3,8 +3,10 @@
 use strict;
 use Test::More tests => 14;
 use FindBin qw($Bin);
+use File::Spec::Functions;
 
-$ENV{PERL5LIB} = join(":", "$Bin/../lib", grep { defined } $ENV{PERL5LIB});
+my $libdir = catdir(updir($Bin), "lib");
+$ENV{PERL5LIB} = join(":", $libdir, grep { defined } $ENV{PERL5LIB});
 
 # test normal use - failure
 my $output = `$^X t/someclass.pl 2>&1`;

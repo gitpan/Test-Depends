@@ -1,0 +1,42 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 31b66632409022fdad69288291778c7fd0262534 MANIFEST
+SHA1 72b509c35b99e11f0749d74d6c1194f3c54b8121 MANIFEST.SKIP
+SHA1 eaac1fcc3913679b3397c5d9ba7d6151f23b8afe META.yml
+SHA1 78edb89a439463e44c33a72bbee84c54d0dc8aaf inc/Module/Install.pm
+SHA1 8ea4e37df83fd0c1c050be5c8da75545c3828d9b inc/Module/Install/Base.pm
+SHA1 1da6031583c32f0d1ec073b8376102fc51427dcc inc/Module/Install/Can.pm
+SHA1 b779375b90c16af2f31f38a1dd2b5df223c7f2fb inc/Module/Install/Fetch.pm
+SHA1 5d6189b2cad15cf9932a28faafd55130c8247e83 inc/Module/Install/Metadata.pm
+SHA1 02af973fae2ac3531fa6b704574b2b8cb2a08148 inc/Module/Install/Win32.pm
+SHA1 3a2eab96e91cca8d99938cda7791759ae9d97b3a inc/Module/Install/WriteAll.pm
+SHA1 2a65a932a1af256996fd842e58fe9f1e4b5574b0 lib/Test/Depends.pm
+SHA1 8e4d7e13673a150aeadab23ac2ad150c8546003d t/00-load.t
+SHA1 5a3a37bad5bcbf58828d5bc8890cbce54d8c7be8 t/02-test-budget-rentaharness.t
+SHA1 e7ee2411d6be3a0ab0155a0acc9951698df303c9 t/SecondClass.pm
+SHA1 b90dc60a2bc34b0719e44163451cff4225e9c8d6 t/SomeClass.pm
+SHA1 8cb0782d17bb7e6487b15f7f91faf156403b8753 t/someclass-import.pl
+SHA1 fcf26d132b6ed56f6e4a1f48ddc74354e6a660e9 t/someclass-version.pl
+SHA1 239d79004df15cd5926fc383d274b6d55ed5c505 t/someclass.pl
+SHA1 2baa4e43e160d139e81d9baf1885d56d75516e4d t/twoclasses.pl
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iEYEARECAAYFAkcxDSEACgkQ/AZAiGayWEOFawCdHW58Z5TUTtF5lV2ujjXiF+fe
+IXkAoKNoL/XnmnXLbjN+i/pFFwwikAm9
+=B900
+-----END PGP SIGNATURE-----
