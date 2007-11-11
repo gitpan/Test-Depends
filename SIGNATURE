@@ -16,7 +16,7 @@ Hash: SHA1
 
 SHA1 31b66632409022fdad69288291778c7fd0262534 MANIFEST
 SHA1 72b509c35b99e11f0749d74d6c1194f3c54b8121 MANIFEST.SKIP
-SHA1 eaac1fcc3913679b3397c5d9ba7d6151f23b8afe META.yml
+SHA1 71439a49c7c5b84057849ea1360d7a7c4f153445 META.yml
 SHA1 78edb89a439463e44c33a72bbee84c54d0dc8aaf inc/Module/Install.pm
 SHA1 8ea4e37df83fd0c1c050be5c8da75545c3828d9b inc/Module/Install/Base.pm
 SHA1 1da6031583c32f0d1ec073b8376102fc51427dcc inc/Module/Install/Can.pm
@@ -24,9 +24,9 @@ SHA1 b779375b90c16af2f31f38a1dd2b5df223c7f2fb inc/Module/Install/Fetch.pm
 SHA1 5d6189b2cad15cf9932a28faafd55130c8247e83 inc/Module/Install/Metadata.pm
 SHA1 02af973fae2ac3531fa6b704574b2b8cb2a08148 inc/Module/Install/Win32.pm
 SHA1 3a2eab96e91cca8d99938cda7791759ae9d97b3a inc/Module/Install/WriteAll.pm
-SHA1 2a65a932a1af256996fd842e58fe9f1e4b5574b0 lib/Test/Depends.pm
+SHA1 b29e6929f8ca65ffa28fba2a4136d3071cb046b9 lib/Test/Depends.pm
 SHA1 8e4d7e13673a150aeadab23ac2ad150c8546003d t/00-load.t
-SHA1 5a3a37bad5bcbf58828d5bc8890cbce54d8c7be8 t/02-test-budget-rentaharness.t
+SHA1 deba64dbf788556519df2af0e0a658ea586c993e t/02-test-budget-rentaharness.t
 SHA1 e7ee2411d6be3a0ab0155a0acc9951698df303c9 t/SecondClass.pm
 SHA1 b90dc60a2bc34b0719e44163451cff4225e9c8d6 t/SomeClass.pm
 SHA1 8cb0782d17bb7e6487b15f7f91faf156403b8753 t/someclass-import.pl
@@ -36,7 +36,7 @@ SHA1 2baa4e43e160d139e81d9baf1885d56d75516e4d t/twoclasses.pl
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.6 (GNU/Linux)
 
-iEYEARECAAYFAkcxDSEACgkQ/AZAiGayWEOFawCdHW58Z5TUTtF5lV2ujjXiF+fe
-IXkAoKNoL/XnmnXLbjN+i/pFFwwikAm9
-=B900
+iEYEARECAAYFAkc3XYcACgkQ/AZAiGayWENKjgCfUHb8223M0/3G8tjVWx4Rt3KX
+uaAAoJiLgdbmzDaNHiAKkYdpwOVkWFrh
+=Bc/Q
 -----END PGP SIGNATURE-----

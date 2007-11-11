@@ -5,7 +5,7 @@ use strict 'vars', 'subs';
 use 5.006;
 use warnings;
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 =head1 NAME
 
@@ -114,6 +114,10 @@ For the complete history,
   git clone git://utsl.gen.nz/Test-Depends
 
 =over
+
+=item 0.05, 12 Nov 2007
+
+*really* fix Win32 compatibility [Matthew Musgrove]
 
 =item 0.04, 7 Nov 2007
 

@@ -3,10 +3,9 @@
 use strict;
 use Test::More tests => 14;
 use FindBin qw($Bin);
-use File::Spec::Functions;
 
-my $libdir = catdir(updir($Bin), "lib");
-$ENV{PERL5LIB} = join(":", $libdir, grep { defined } $ENV{PERL5LIB});
+my $sep = $^O eq 'MSWin32' ? ';' : ':';
+$ENV{PERL5LIB} = join($sep, "$Bin/../lib", grep { defined } $ENV{PERL5LIB});
 
 # test normal use - failure
 my $output = `$^X t/someclass.pl 2>&1`;
@@ -14,7 +13,7 @@ is($output, "1..0 # Skip missing/broken dependancies; SomeClass\n",
    "include SomeClass (missing) bails out");
 is($?, 0, "correct RC");
 
-$ENV{PERL5LIB} = join(":", $Bin, grep { defined } $ENV{PERL5LIB});
+$ENV{PERL5LIB} = join($sep, $Bin, grep { defined } $ENV{PERL5LIB});
 
 $output = `$^X t/someclass.pl 2>&1`;
 is($output, "1..1\nok 1\n",
