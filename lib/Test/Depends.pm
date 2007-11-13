@@ -5,7 +5,7 @@ use strict 'vars', 'subs';
 use 5.006;
 use warnings;
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 =head1 NAME
 
@@ -115,13 +115,10 @@ For the complete history,
 
 =over
 
-=item 0.05, 12 Nov 2007
+=item 0.06, 13 Nov 2007
 
-*really* fix Win32 compatibility [Matthew Musgrove]
-
-=item 0.04, 7 Nov 2007
-
-Fix Win32 compatibility
+fix Win32 compatibility [Matthew Musgrove].  Releases 0.04 and 0.05
+were missing Makefile.PL's and were retracted.
 
 =item 0.03, 25 May 2006
 
